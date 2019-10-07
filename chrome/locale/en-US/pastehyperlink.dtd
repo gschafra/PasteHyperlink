@@ -1,0 +1,29 @@
+
+<!ENTITY pastehyperlink.options.title "PasteHyperlink Options">
+<!ENTITY pastehyperlink.explanation "You may paste ANYTHING into a hyperlink!">
+<!ENTITY pastehyperlink.confirmvalidation "Confirm if clipboard contents do not contain valid hyperlink (recommended)">
+<!ENTITY pastehyperlink.prependhttp "Prepend 'http' if needed (allows composer to display as link, in case you only have 'www')">
+<!ENTITY pastehyperlink.encodecliptext "Url encode the hyperlink (only useful if your link seems not to be valid)">
+<!ENTITY pastehyperlink.linkifyemail "Linkify email addresses">
+<!ENTITY pastehyperlink.displayformatbuttons "Display Format Toolbar Buttons">
+<!ENTITY pastehyperlink.authour "by a Catholic Religious Brother">
+
+<!ENTITY pastehyperlink.caption "Preferences">
+
+<!ENTITY pastehyperlink.name "PasteHyperlink">
+<!ENTITY pastehyperlink.label "Paste Hyperlink">
+<!ENTITY pastehyperlink.tooltip "Paste Hyperlink">
+<!ENTITY pastehyperlink.accesskey "Y">
+
+<!ENTITY removehyperlink.name "RemoveHyperlink">
+<!ENTITY removehyperlink.label "Remove Hyperlink">
+<!ENTITY removehyperlink.tooltip "Remove Hyperlink">
+<!ENTITY removehyperlink.accesskey "R">
+
+<!ENTITY fetchhyperlink.name "FetchHyperlink">
+<!ENTITY fetchhyperlink.label "Fetch Hyperlink">
+<!ENTITY fetchhyperlink.tooltip "Fetch Hyperlink">
+<!ENTITY fetchhyperlink.accesskey "F">
+
+
+

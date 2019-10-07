@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<?xml-stylesheet href="chrome://mailmerge/content/options.css" type="text/css"?>
+
+<!DOCTYPE prefwindow SYSTEM "chrome://pastehyperlink/locale/pastehyperlink.dtd">
+
+<prefwindow id="PasteHyperlinkPrefWindow" title="&pastehyperlink.options.title;"
+						xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<prefpane id="psPrefpanel">
+
+		<preferences>
+			<preference id="confirmvalidation" name="extensions.pastehyperlink.confirmvalidation" type="bool" />
+			<preference id="prependhttp" name="extensions.pastehyperlink.prependhttp" type="bool" />
+			<preference id="encodecliptext" name="extensions.pastehyperlink.encodecliptext" type="bool" />
+			<preference id="linkifyemail" name="extensions.pastehyperlink.linkifyemail" type="bool" />
+			<preference id="displayformatbuttons" name="extensions.pastehyperlink.displayformatbuttons" type="bool" />
+		</preferences>
+
+		<label value="&pastehyperlink.explanation;" />
+
+		<groupbox>
+			<caption label="&pastehyperlink.caption;" />
+			<checkbox id="confirmvalidation"
+								label="&pastehyperlink.confirmvalidation;"
+								preference="confirmvalidation" />
+			<checkbox id="prependhttp"
+								label="&pastehyperlink.prependhttp;"
+								preference="prependhttp" />
+			<checkbox id="encodecliptext"
+								label="&pastehyperlink.encodecliptext;"
+								preference="encodecliptext" />
+			<checkbox id="linkifyemail"
+								label="&pastehyperlink.linkifyemail;"
+								preference="linkifyemail" />				
+			<checkbox id="displayformatbuttons"
+								label="&pastehyperlink.displayformatbuttons;"
+								preference="displayformatbuttons" />								
+		</groupbox>
+
+		<label value="&pastehyperlink.authour;" />
+		
+
+	</prefpane>
+
+</prefwindow>

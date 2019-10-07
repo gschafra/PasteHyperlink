@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet href="chrome://pastehyperlink/skin/pastehyperlinkTB.css" type="text/css"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://pastehyperlink/locale/pastehyperlink.dtd">
+
+<overlay id="pastehyperlink-overlay"
+				 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+
+	<script type="application/x-javascript" src="chrome://pastehyperlink/content/pastehyperlink.js" />
+
+	<stringbundleset id="stringbundleset">
+		<stringbundle id="pastehyperlinkStrings" src="chrome://pastehyperlink/locale/pastehyperlink.properties" />
+	</stringbundleset>
+
+	<!-- Main Edit Menu within Message Compose Window -->
+	<menupopup id="menu_EditPopup">
+		<menuitem id="pastehyperlink-EditMenu_pastehyperlink"
+				label="&pastehyperlink.label;"
+				class="menuitem-iconic"
+				accesskey="&pastehyperlink.accesskey;"
+				oncommand="pastehyperlink.onMenuItem_pastehyperlink(event);"
+				insertafter="Paste" />
+		<menuitem id="pastehyperlink-EditMenu_removehyperlink"
+				label="&removehyperlink.label;"
+				class="menuitem-iconic"
+				accesskey="&removehyperlink.accesskey;"
+				oncommand="pastehyperlink.onMenuItem_removehyperlink(event);" />
+		<menuitem id="pastehyperlink-EditMenu_fetchhyperlink"
+				label="&fetchhyperlink.label;"
+				class="menuitem-iconic"
+				accesskey="&fetchhyperlink.accesskey;"
+				oncommand="pastehyperlink.onMenuItem_fetchhyperlink(event);" />				
+	</menupopup>
+
+	
+	<!-- Tools Menu within Message Compose Window -->
+	<menupopup id="taskPopup">
+		<menuitem id="pastehyperlink-TaskMenu_pastehyperlink"
+				label="&pastehyperlink.options.title;"
+				class="menuitem-iconic"
+				accesskey="&pastehyperlink.accesskey;"
+				oncommand="pastehyperlink.OpenPrefsPanel();"
+				/>
+	</menupopup>	
+	
+	
+	<!-- Keyboard commands -->
+	<keyset>
+		<key id="pastehyperlink-keyboard_pastehyperlink"
+				modifiers="shift alt"
+				key="Y"
+				oncommand="pastehyperlink.onKeyboard_pastehyperlink(event);" />
+		<key id="pastehyperlink-keyboard_removehyperlink"
+				modifiers="shift alt"
+				key="R"
+				oncommand="pastehyperlink.onKeyboard_removehyperlink(event);" />
+		<key id="pastehyperlink-keyboard_fetchhyperlink"
+				modifiers="shift alt"
+				key="F"
+				oncommand="pastehyperlink.onKeyboard_fetchhyperlink(event);" />				
+	</keyset>
+
+	
+	<!-- Buttons for the Main Toolbar in Message Compose Window -->
+	<toolbarpalette id="MsgComposeToolbarPalette">
+		<toolbarbutton 	id="pastehyperlink-toolbarbutton_pastehyperlink"
+				class="toolbarbutton-1 chromeclass-toolbar-additional"
+				label="&pastehyperlink.label;"
+				tooltiptext="&pastehyperlink.label;"
+				oncommand="pastehyperlink.onToolbarButton_pastehyperlink(event);" />
+		<toolbarbutton 	id="pastehyperlink-toolbarbutton_removehyperlink"
+				class="toolbarbutton-1 chromeclass-toolbar-additional"
+				label="&removehyperlink.label;"
+				tooltiptext="&removehyperlink.label;"
+				oncommand="pastehyperlink.onToolbarButton_removehyperlink(event);" />
+		<toolbarbutton 	id="pastehyperlink-toolbarbutton_fetchhyperlink"
+				class="toolbarbutton-1 chromeclass-toolbar-additional"
+				label="&fetchhyperlink.label;"
+				tooltiptext="&fetchhyperlink.label;"
+				oncommand="pastehyperlink.onToolbarButton_fetchhyperlink(event);" />				
+	</toolbarpalette>
+
+	
+	<!-- Buttons for the Message Compose Format Toolbar -->
+	<toolbox id="FormatToolbox">
+		<toolbarpalette id="FormatToolbarPalette">
+			<toolbarbutton id="pastehyperlink-formatbutton_pastehyperlink"
+				class="formatting-button"
+				tooltiptext="&pastehyperlink.label;"
+				removable="true"
+				oncommand="pastehyperlink.onFormatButton_pastehyperlink(event);"	/>
+			<toolbarbutton id="pastehyperlink-formatbutton_removehyperlink"
+				class="formatting-button"
+				tooltiptext="&removehyperlink.label;"
+				removable="true"
+				oncommand="pastehyperlink.onFormatButton_removehyperlink(event);"	/>		
+			<toolbarbutton id="pastehyperlink-formatbutton_fetchhyperlink"
+				class="formatting-button"
+				tooltiptext="&fetchhyperlink.label;"
+				removable="true"
+				oncommand="pastehyperlink.onFormatButton_fetchhyperlink(event);"	/>						
+		</toolbarpalette>
+	</toolbox>
+
+	
+	<!-- Message Compose Context Menu Items (when you click on text or select text) -->
+	<menupopup id="msgComposeContext">
+		<menuseparator id="activities-separator"/>
+		<menuitem id="pastehyperlink-contextmenu_pastehyperlink" 
+				label="&pastehyperlink.label;"
+				accesskey="&pastehyperlink.accesskey;"
+				insertafter="context-stop"
+				class="menuitem-iconic" 
+				oncommand="pastehyperlink.onContextMenu_pastehyperlink(event)" />
+		<menuitem id="pastehyperlink-contextmenu_removehyperlink" 
+				label="&removehyperlink.label;"
+				accesskey="&removehyperlink.accesskey;"
+				insertafter="pastehyperlink-contextmenu_pastehyperlink"
+				class="menuitem-iconic" 
+				oncommand="pastehyperlink.onContextMenu_removehyperlink(event)" />
+		<menuitem id="pastehyperlink-contextmenu_fetchhyperlink" 
+				label="&fetchhyperlink.label;"
+				accesskey="&fetchhyperlink.accesskey;"
+				insertafter="pastehyperlink-contextmenu_removehyperlink"
+				class="menuitem-iconic" 
+				oncommand="pastehyperlink.onContextMenu_fetchhyperlink(event)" />				
+	</menupopup>
+
+</overlay>

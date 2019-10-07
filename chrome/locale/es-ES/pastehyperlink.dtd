@@ -1,0 +1,30 @@
+
+<!ENTITY pastehyperlink.options.title "Opciones PegueHipervínculo">
+<!ENTITY pastehyperlink.explanation "Puede pegar cualquier cosa en un hipervínculo!">
+<!ENTITY pastehyperlink.confirmvalidation "Compruebe si el contenido del portapapeles no contiene hipervínculo válido (se recomienda)">
+<!ENTITY pastehyperlink.prependhttp "'Http' Anteponer si es necesario (compositor permite que se muestre como enlace, en caso de que sólo tienen 'www')">
+<!ENTITY pastehyperlink.encodecliptext "Url codificar el hipervínculo (sólo es útil si el enlace no parece ser válido)">
+<!ENTITY pastehyperlink.displayformatbuttons "Formato de visualización de barra de herramientas Botones">
+<!ENTITY pastehyperlink.linkifyemail "Hacer direcciones de correo electrónico en hipervínculos">
+
+<!ENTITY pastehyperlink.authour "de uno religioso católica">
+
+<!ENTITY pastehyperlink.caption "Preferencias">
+
+<!ENTITY pastehyperlink.name "PegueHipervínculo">
+<!ENTITY pastehyperlink.label "Pegue Hipervínculo">
+<!ENTITY pastehyperlink.tooltip "Pegue Hipervínculo">
+<!ENTITY pastehyperlink.accesskey "Y">
+
+<!ENTITY removehyperlink.name "QuitarHipervínculo">
+<!ENTITY removehyperlink.label "Quitar Hipervínculo">
+<!ENTITY removehyperlink.tooltip "Quitar Hipervínculo">
+<!ENTITY removehyperlink.accesskey "R">
+
+<!ENTITY fetchhyperlink.name "ExtraerHipervínculo">
+<!ENTITY fetchhyperlink.label "Extraer Hipervínculo">
+<!ENTITY fetchhyperlink.tooltip "Extraer Hipervínculo">
+<!ENTITY fetchhyperlink.accesskey "E">
+
+
+

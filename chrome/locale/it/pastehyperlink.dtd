@@ -1,0 +1,27 @@
+
+<!ENTITY pastehyperlink.options.title "Opzioni IncollaCollegamentoIpertestuale">
+<!ENTITY pastehyperlink.explanation "Puoi inserire qualsiasi cosa in un collegamento ipertestuale!">
+<!ENTITY pastehyperlink.confirmvalidation "Verificare se il contenuto degli Appunti non contengono collegamento ipertestuale valido (consigliato)">
+<!ENTITY pastehyperlink.prependhttp "Anteponi 'http', se necessario (compositore permette di visualizzare come link, nel caso in cui si dispone solo di 'www')">
+<!ENTITY pastehyperlink.encodecliptext "Url codificare il collegamento ipertestuale (utile solo se il tuo link sembra non essere valido)">
+<!ENTITY pastehyperlink.linkifyemail "Fai indirizzi e-mail in hyperlink">
+<!ENTITY pastehyperlink.displayformatbuttons "I pulsanti della barra degli strumenti Formato schermo">
+<!ENTITY pastehyperlink.authour "Da Un Fratello Religioso Cattolico">
+
+<!ENTITY pastehyperlink.caption "Preferenze">
+
+<!ENTITY pastehyperlink.name "IncollaCollegamentoIpertestuale">
+<!ENTITY pastehyperlink.label "Incolla collegamento ipertestuale">
+<!ENTITY pastehyperlink.tooltip "Incolla collegamento ipertestuale">
+<!ENTITY pastehyperlink.accesskey "Y">
+
+<!ENTITY removehyperlink.name "RimuoviCollegamentoIpertestuale">
+<!ENTITY removehyperlink.label "Rimuovi collegamento ipertestuale">
+<!ENTITY removehyperlink.tooltip "Rimuovi collegamento ipertestuale">
+<!ENTITY removehyperlink.accesskey "R">
+
+<!ENTITY fetchhyperlink.name "EstrarreCollegamentoIpertestuale">
+<!ENTITY fetchhyperlink.label "Estrarre collegamento ipertestuale">
+<!ENTITY fetchhyperlink.tooltip "Estrarre collegamento ipertestuale">
+<!ENTITY fetchhyperlink.accesskey "E">
+

@@ -1,0 +1,23 @@
+#
+# PasteHyperlink Thunderbird and SeaMonkey Extension
+# by a Catholic Religious Brother
+#
+
+content  pastehyperlink  chrome/content/
+skin     pastehyperlink  classic  chrome/skin/
+overlay  chrome://messenger/content/messengercompose/messengercompose.xul chrome://pastehyperlink/content/pastehyperlink_thunderbird.xul application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+overlay  chrome://messenger/content/messengercompose/messengercompose.xul chrome://pastehyperlink/content/pastehyperlink_seamonkey.xul application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+style    chrome://messenger/content/messengercompose/messengercompose.xul	chrome://pastehyperlink/skin/pastehyperlinkTB.css application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+style    chrome://messenger/content/messengercompose/messengercompose.xul	chrome://pastehyperlink/skin/pastehyperlinkSM.css application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+style	   chrome://messenger/content/customizeToolbar.xul  chrome://pastehyperlink/skin/pastehyperlinkTB.css application={3550f703-e582-4d05-9a08-453d09bdfdc6}
+style	   chrome://messenger/content/customizeToolbar.xul  chrome://pastehyperlink/skin/pastehyperlinkSM.css application={92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}
+
+locale    pastehyperlink   en-US         chrome/locale/en-US/
+locale    pastehyperlink   pl         	 chrome/locale/pl/
+locale    pastehyperlink   ru-RU       	 chrome/locale/ru-RU/
+locale    pastehyperlink   es-ES         chrome/locale/es-ES/
+locale    pastehyperlink   fr	        chrome/locale/fr/
+locale    pastehyperlink   it	        chrome/locale/it/
+locale    pastehyperlink   de	        chrome/locale/de/
+
+

@@ -1,0 +1,27 @@
+
+<!ENTITY pastehyperlink.options.title "Options de CollerLienHypertexte">
+<!ENTITY pastehyperlink.explanation "Vous pouvez coller n'importe quoi dans un lien hypertexte!">
+<!ENTITY pastehyperlink.confirmvalidation "Confirmer si le contenu du presse-papiers ne contient pas de lien hypertexte valide (recommandé)">
+<!ENTITY pastehyperlink.prependhttp "Préfixer par 'http' si nécessaire (permet au composeur de l'afficher comme un lien dans le cas où il n'y a que 'www')">
+<!ENTITY pastehyperlink.encodecliptext "Encoder en Url le lien hypertexte (utile uniquement si votre lien ne semble pas être valide)">
+<!ENTITY pastehyperlink.linkifyemail "Convertir les adresses de courriel en hyperliens">
+<!ENTITY pastehyperlink.displayformatbuttons "Afficher les boutons sur la barre d'outils de format">
+<!ENTITY pastehyperlink.authour "par un Frère Religieux Catholique">
+
+<!ENTITY pastehyperlink.caption "Préférences">
+
+<!ENTITY pastehyperlink.name "CollerLienHypertexte">
+<!ENTITY pastehyperlink.label "Coller l'Url">
+<!ENTITY pastehyperlink.tooltip "Coller le lien hypertexte">
+<!ENTITY pastehyperlink.accesskey "Y">
+
+<!ENTITY removehyperlink.name "RetirerLienHypertexte">
+<!ENTITY removehyperlink.label "Retirer l'Url">
+<!ENTITY removehyperlink.tooltip "Retirer le lien hypertexte">
+<!ENTITY removehyperlink.accesskey "R">
+
+<!ENTITY fetchhyperlink.name "RapporterHyperlink">
+<!ENTITY fetchhyperlink.label "Rapporter hyperlink">
+<!ENTITY fetchhyperlink.tooltip "Rapporter hyperlink">
+<!ENTITY fetchhyperlink.accesskey "P">
+

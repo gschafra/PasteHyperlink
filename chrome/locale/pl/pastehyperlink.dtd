@@ -1,0 +1,24 @@
+﻿<!ENTITY pastehyperlink.options.title "PasteHyperlink – ustawienia">
+<!ENTITY pastehyperlink.explanation "Możesz wstawić do odnośnika co chcesz!">
+<!ENTITY pastehyperlink.confirmvalidation "Sprawdzaj czy tekst w schowku jest prawidłowym odnośnikiem (zalecane)"><!ENTITY pastehyperlink.prependhttp "Dodawaj, jeśli zachodzi potrzeba, 'http'. Jeśli wystepuje tylko 'www' umożliwia kompozytorowi wyświetlanie jako odnośnika.">
+<!ENTITY pastehyperlink.encodecliptext "Koduj odnośnik jako adres URL (użyteczne tylko, jeśli odnośnik wydgląda na nieprawidowy)">
+<!ENTITY pastehyperlink.linkifyemail "Producent adresy e-mail do hiperłączy">
+<!ENTITY pastehyperlink.displayformatbuttons "Format wyświetlania Przyciski paska narzędziowego">
+<!ENTITY pastehyperlink.authour "autor: Catholic Religious Brother">
+
+<!ENTITY pastehyperlink.caption "Preferencje">
+
+<!ENTITY pastehyperlink.name "WstawOdnośnik">
+<!ENTITY pastehyperlink.label "Wstaw odnośnik">
+<!ENTITY pastehyperlink.tooltip "Wstaw odnośnik">
+<!ENTITY pastehyperlink.accesskey "W">
+
+<!ENTITY removehyperlink.name "UsuńDnośnik">
+<!ENTITY removehyperlink.label "Usuń dnośnik">
+<!ENTITY removehyperlink.tooltip "Usuń dnośnik">
+<!ENTITY removehyperlink.accesskey "U">
+
+<!ENTITY fetchhyperlink.name "EkstraktDnośnik">
+<!ENTITY fetchhyperlink.label "Ekstrakt dnośnik">
+<!ENTITY fetchhyperlink.tooltip "Ekstrakt dnośnik">
+<!ENTITY fetchhyperlink.accesskey "E">

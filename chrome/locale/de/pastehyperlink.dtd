@@ -1,0 +1,29 @@
+
+<!ENTITY pastehyperlink.options.title "Hyperlink Einfügen Optionen">
+<!ENTITY pastehyperlink.explanation "Sie können alles in einem Hyperlink einfügen!">
+<!ENTITY pastehyperlink.confirmvalidation "Bestätigen Sie, wenn der Inhalt der Zwischenablage keinen gültigen Hyperlink enthält(empfohlen)">
+<!ENTITY pastehyperlink.prependhttp "'http://' voranstellen, wenn nötig">
+<!ENTITY pastehyperlink.encodecliptext "URL Encoding ( nur sinnvoll wenn der Link nicht gültig zu sein scheint)">
+<!ENTITY pastehyperlink.linkifyemail "E-Mail-Adressen als Hyperlinks einfügen">
+<!ENTITY pastehyperlink.displayformatbuttons "Anzeigeformat Toolbar Buttons">
+<!ENTITY pastehyperlink.authour "Von einem katholischen Glaubensbruder">
+
+<!ENTITY pastehyperlink.caption "Einstellungen">
+
+<!ENTITY pastehyperlink.name "Hyperlink einfügen">
+<!ENTITY pastehyperlink.label "Hyperlink einfügen">
+<!ENTITY pastehyperlink.tooltip "Hyperlink einfügen">
+<!ENTITY pastehyperlink.accesskey "Y">
+
+<!ENTITY removehyperlink.name "Hyperlink Entfernen">
+<!ENTITY removehyperlink.label "Hyperlink Entfernen">
+<!ENTITY removehyperlink.tooltip "Hyperlink Entfernen">
+<!ENTITY removehyperlink.accesskey "R">
+
+<!ENTITY fetchhyperlink.name "HolenHyperlink">
+<!ENTITY fetchhyperlink.label "Holen hyperlink">
+<!ENTITY fetchhyperlink.tooltip "Holen hyperlink">
+<!ENTITY fetchhyperlink.accesskey "H">
+
+
+

@@ -1,0 +1,27 @@
+
+<!ENTITY pastehyperlink.options.title "ВставитьГиперссылка Параметры">
+<!ENTITY pastehyperlink.explanation "Вы можете вставить что-либо в гиперссылку!">
+<!ENTITY pastehyperlink.confirmvalidation "Подтвердите, если содержимое буфера обмена не содержат действительно гиперссылка (рекомендуется)">
+<!ENTITY pastehyperlink.prependhttp "'HTTP' Присоединение при необходимости (позволяет композитору, чтобы увидеть, как ссылка, в случае, если у вас есть только 'WWW')">
+<!ENTITY pastehyperlink.encodecliptext "Url кодирования гиперссылка (только полезно, если ваша ссылка, кажется, не действительны)">
+<!ENTITY pastehyperlink.linkifyemail "Сделать адресов электронной почты в гиперссылки">
+<!ENTITY pastehyperlink.displayformatbuttons "Формат отображения Кнопки панели инструментов">
+<!ENTITY pastehyperlink.authour "Создан Католической Религиозные брат">
+
+<!ENTITY pastehyperlink.caption "Предпочтения">
+
+<!ENTITY pastehyperlink.name "ВставитьГиперссылка">
+<!ENTITY pastehyperlink.label "Вставить Гиперссылка">
+<!ENTITY pastehyperlink.tooltip "Вставить Гиперссылка">
+<!ENTITY pastehyperlink.accesskey "Y">
+
+<!ENTITY removehyperlink.name "Удалите Гиперссылка">
+<!ENTITY removehyperlink.label "Удалите гиперссылка">
+<!ENTITY removehyperlink.tooltip "Удалите гиперссылка">
+<!ENTITY removehyperlink.accesskey "R">
+
+<!ENTITY fetchhyperlink.name "экстрактГиперссылка">
+<!ENTITY fetchhyperlink.label "экстракт гиперссылка">
+<!ENTITY fetchhyperlink.tooltip "экстракт гиперссылка">
+<!ENTITY fetchhyperlink.accesskey "E">
+

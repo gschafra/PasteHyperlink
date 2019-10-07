@@ -1,0 +1,43 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/*Thunderbird*/
+
+#pastehyperlink-toolbarbutton_pastehyperlink,
+#pastehyperlink-toolbarbutton_removehyperlink:hover {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink24.png");}
+
+#pastehyperlink-toolbarbutton_pastehyperlink:hover,
+#pastehyperlink-toolbarbutton_removehyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink24h.png");}
+	
+#pastehyperlink-toolbarbutton_fetchhyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink24f.png");}	
+
+#pastehyperlink-formatbutton_pastehyperlink{
+list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16.png");}
+#pastehyperlink-formatbutton_removehyperlink{
+list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16h.png");}	
+#pastehyperlink-formatbutton_fetchhyperlink{
+list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16f.png");}	
+	
+[iconsize="small"] #pastehyperlink-toolbarbutton_pastehyperlink, 
+[iconsize="small"] #pastehyperlink-toolbarbutton_removehyperlink:hover,
+[iconsize="small"] #pastehyperlink-formatbutton_pastehyperlink,
+[iconsize="small"] #pastehyperlink-formatbutton_removehyperlink:hover,
+#pastehyperlink-EditMenu_pastehyperlink, 
+#pastehyperlink-TaskMenu_pastehyperlink, 
+#pastehyperlink-contextmenu_pastehyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16.png");}	
+
+[iconsize="small"] #pastehyperlink-toolbarbutton_pastehyperlink:hover, 
+[iconsize="small"] #pastehyperlink-toolbarbutton_removehyperlink, 
+[iconsize="small"] #pastehyperlink-formatbutton_pastehyperlink:hover,
+[iconsize="small"] #pastehyperlink-formatbutton_removehyperlink,
+#pastehyperlink-EditMenu_removehyperlink, 
+#pastehyperlink-contextmenu_removehyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16h.png");}
+	
+	
+[iconsize="small"] #pastehyperlink-formatbutton_fetchhyperlink,	
+#pastehyperlink-EditMenu_fetchhyperlink, 
+#pastehyperlink-contextmenu_fetchhyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16f.png");}	

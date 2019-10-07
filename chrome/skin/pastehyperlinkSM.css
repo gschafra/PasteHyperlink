@@ -1,0 +1,44 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+/*SeaMonkey*/
+
+#pastehyperlink-toolbarbutton_pastehyperlink,
+#pastehyperlink-toolbarbutton_removehyperlink:hover {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink30.png");}
+
+#pastehyperlink-toolbarbutton_pastehyperlink:hover,
+#pastehyperlink-toolbarbutton_removehyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink30h.png");}
+
+#pastehyperlink-toolbarbutton_fetchhyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink30f.png");}
+	
+#pastehyperlink-formatbutton_pastehyperlink{
+list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16.png");}
+#pastehyperlink-formatbutton_removehyperlink{
+list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16h.png");}	
+#pastehyperlink-formatbutton_fetchhyperlink{
+list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16f.png");}
+
+[iconsize="small"] #pastehyperlink-toolbarbutton_pastehyperlink,
+[iconsize="small"] #pastehyperlink-toolbarbutton_removehyperlink:hover {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink20.png");}
+
+[iconsize="small"] #pastehyperlink-toolbarbutton_pastehyperlink:hover, 
+[iconsize="small"] #pastehyperlink-toolbarbutton_removehyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink20h.png");}
+ 
+[iconsize="small"] #pastehyperlink-toolbarbutton_fetchhyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink20f.png");} 
+ 
+#pastehyperlink-TaskMenu_pastehyperlink,
+#pastehyperlink-EditMenu_pastehyperlink, 
+#pastehyperlink-contextmenu_pastehyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16.png");}
+
+#pastehyperlink-EditMenu_removehyperlink, 
+#pastehyperlink-contextmenu_removehyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16h.png");}
+
+#pastehyperlink-EditMenu_fetchhyperlink, 
+#pastehyperlink-contextmenu_fetchhyperlink {
+	list-style-image: url("chrome://pastehyperlink/skin/pastehyperlink16f.png");}	
