@@ -6,7 +6,7 @@
 <!ENTITY pastehyperlink.encodecliptext "URL Encoding ( nur sinnvoll wenn der Link nicht gültig zu sein scheint)">
 <!ENTITY pastehyperlink.linkifyemail "E-Mail-Adressen als Hyperlinks einfügen">
 <!ENTITY pastehyperlink.displayformatbuttons "Anzeigeformat Toolbar Buttons">
-<!ENTITY pastehyperlink.authour "Von einem katholischen Glaubensbruder">
+<!ENTITY pastehyperlink.author "Von einem katholischen Glaubensbruder">
 
 <!ENTITY pastehyperlink.caption "Einstellungen">
 

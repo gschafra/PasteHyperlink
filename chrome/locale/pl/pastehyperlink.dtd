@@ -4,7 +4,7 @@
 <!ENTITY pastehyperlink.encodecliptext "Koduj odnośnik jako adres URL (użyteczne tylko, jeśli odnośnik wydgląda na nieprawidowy)">
 <!ENTITY pastehyperlink.linkifyemail "Producent adresy e-mail do hiperłączy">
 <!ENTITY pastehyperlink.displayformatbuttons "Format wyświetlania Przyciski paska narzędziowego">
-<!ENTITY pastehyperlink.authour "autor: Catholic Religious Brother">
+<!ENTITY pastehyperlink.author "autor: Catholic Religious Brother">
 
 <!ENTITY pastehyperlink.caption "Preferencje">
 

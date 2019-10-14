@@ -1,0 +1,13 @@
+{
+    "curly": true,
+    "eqeqeq": true,
+    "undef": true,
+    "moz": true,
+    "globals": {
+        "jQuery": true,
+        "ChromeUtils": true,
+        "Components": true,
+        "window": true,
+        "document": true
+    }
+}

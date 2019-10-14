@@ -3,7 +3,6 @@
     "version": "2.0.0",
     "description": "Paste the clipboard contents into the selected text as a hyperlink.",
     "author": "BGM",
-
     "applications": {
         "gecko": {
             "id": "PasteHyperlink@sspxusa.org",
@@ -11,7 +10,6 @@
             "strict_max_version": "68.*"
         }
     },
-
     "icons": {
         "16": "skin/pastehyperlink16.png",
         "24": "skin/pastehyperlink24.png",
@@ -19,15 +17,11 @@
         "48": "skin/pastehyperlink48.png",
         "64": "skin/pastehyperlink64.png"
     },
-
     "legacy": {
-        "type": "xul",
         "options": {
             "page": "chrome://PasteHyperlink/content/options.xul",
-            "open_in_tab": false
+            "open_in_tab": true
         }
     },
-
     "manifest_version": 2
-
 }

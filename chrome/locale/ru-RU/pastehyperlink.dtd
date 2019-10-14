@@ -6,7 +6,7 @@
 <!ENTITY pastehyperlink.encodecliptext "Url кодирования гиперссылка (только полезно, если ваша ссылка, кажется, не действительны)">
 <!ENTITY pastehyperlink.linkifyemail "Сделать адресов электронной почты в гиперссылки">
 <!ENTITY pastehyperlink.displayformatbuttons "Формат отображения Кнопки панели инструментов">
-<!ENTITY pastehyperlink.authour "Создан Католической Религиозные брат">
+<!ENTITY pastehyperlink.author "Создан Католической Религиозные брат">
 
 <!ENTITY pastehyperlink.caption "Предпочтения">
 

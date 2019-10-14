@@ -6,7 +6,7 @@
 <!ENTITY pastehyperlink.encodecliptext "Url codificare il collegamento ipertestuale (utile solo se il tuo link sembra non essere valido)">
 <!ENTITY pastehyperlink.linkifyemail "Fai indirizzi e-mail in hyperlink">
 <!ENTITY pastehyperlink.displayformatbuttons "I pulsanti della barra degli strumenti Formato schermo">
-<!ENTITY pastehyperlink.authour "Da Un Fratello Religioso Cattolico">
+<!ENTITY pastehyperlink.author "Da Un Fratello Religioso Cattolico">
 
 <!ENTITY pastehyperlink.caption "Preferenze">
 

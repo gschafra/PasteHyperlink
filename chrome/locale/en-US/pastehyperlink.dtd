@@ -6,7 +6,7 @@
 <!ENTITY pastehyperlink.encodecliptext "Url encode the hyperlink (only useful if your link seems not to be valid)">
 <!ENTITY pastehyperlink.linkifyemail "Linkify email addresses">
 <!ENTITY pastehyperlink.displayformatbuttons "Display Format Toolbar Buttons">
-<!ENTITY pastehyperlink.authour "by a Catholic Religious Brother">
+<!ENTITY pastehyperlink.author "by a Catholic Religious Brother">
 
 <!ENTITY pastehyperlink.caption "Preferences">
 

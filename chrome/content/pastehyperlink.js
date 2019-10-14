@@ -12,11 +12,11 @@ var pastehyperlink = {
 
         //https://developer.mozilla.org/en-US/docs/Mozilla/Tech/XUL/Using_nsIXULAppInfo
         var appInfo = Components.classes["@mozilla.org/xre/app-info;1"].getService(Components.interfaces.nsIXULAppInfo);
-        if (appInfo.ID == "{3550f703-e582-4d05-9a08-453d09bdfdc6}") { // running under Thunderbird
+        if (appInfo.ID === "{3550f703-e582-4d05-9a08-453d09bdfdc6}") { // running under Thunderbird
             this.AddThunderbirdFormatButton("pastehyperlink-formatbutton_pastehyperlink");
             this.AddThunderbirdFormatButton("pastehyperlink-formatbutton_removehyperlink");
             this.AddThunderbirdFormatButton("pastehyperlink-formatbutton_fetchhyperlink");
-        } else if (appInfo.ID == "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}") { // running under SeaMonkey
+        } else if (appInfo.ID === "{92650c4d-4b8e-4d2a-b7eb-24ecf4f6b63a}") { // running under SeaMonkey
             this.AddSeaMonkeyFormatButton("pastehyperlink-formatbutton_pastehyperlink");
             this.AddSeaMonkeyFormatButton("pastehyperlink-formatbutton_removehyperlink");
             this.AddSeaMonkeyFormatButton("pastehyperlink-formatbutton_fetchhyperlink");
@@ -27,7 +27,7 @@ var pastehyperlink = {
                 this.AddSeaMonkeyToolbarButton("pastehyperlink-toolbarbutton_fetchhyperlink");
 
                 this.prefs.setBoolPref("extensions.pastehyperlink.firstrun", false);
-            };
+            }
         }
         this.DisplayFormatToolbarButtons();
         this.prefs.addObserver("", this, false);
@@ -35,8 +35,7 @@ var pastehyperlink = {
 
 
     observe: function(subject, topic, data) {
-        if (data = "displayformatbuttons") {
-            console.log("observed");
+        if (data === "displayformatbuttons") {
             this.DisplayFormatToolbarButtons();
         }
     },
@@ -61,7 +60,7 @@ var pastehyperlink = {
             toolbar.setAttribute('currentset', newset);
             document.persist(toolbar.id, "currentset");
             document.getElementById('compose-toolbox').customizeDone(true);
-        };
+        }
 
     },
 
@@ -73,7 +72,7 @@ var pastehyperlink = {
             toolbar.currentSet = newset;
             toolbar.setAttribute('currentset', newset);
             document.persist(toolbar.id, "currentset");
-        };
+        }
 
     },
 
@@ -101,7 +100,7 @@ var pastehyperlink = {
             toolbar.currentSet = newset;
             toolbar.setAttribute('currentset', newset);
             document.persist(toolbar.id, "currentset");
-        };
+        }
     },
 
     //check the preference and either add or remove the format buttons
@@ -148,20 +147,20 @@ var pastehyperlink = {
         //first, check to see if it is an email so we don't do anything dastardly to it
         if (this.prefs.getBoolPref("extensions.pastehyperlink.linkifyemail")) {
             if (this.IsValidEmail(thislink)) {
-                thislink = "mailto:" + thislink
+                thislink = "mailto:" + thislink;
                 this.PasteHyperlink(thislink, whatcliptext); //we don't need to process further, so pastehyperlink now
                 return null;
-            };
-        };
+            }
+        }
 
         //USER CONFIRMATION
         //if the clipboard doesn't contain a valid url, then ask the user whether to paste it anyway.
         if (this.prefs.getBoolPref("extensions.pastehyperlink.confirmvalidation")) { //if the option is set to true...
             if (!this.IsValidUrl(thislink)) {
                 var proceed = this.prompts.confirm(null, "PasteHyperlink", document.getElementById("pastehyperlinkStrings").getString("pastehyperlinkConfirm"));
-                if (!proceed) { return null; }; //if they say no, then don't do it
-            };
-        };
+                if (!proceed) { return null; } //if they say no, then don't do it
+            }
+        }
 
         //did the user want us to urlencode the links?		
         if (this.prefs.getBoolPref("extensions.pastehyperlink.encodecliptext")) { //if the option is set to true...
@@ -173,17 +172,17 @@ var pastehyperlink = {
                 //thislink = encodeURI(thislink);
                 //}else{  //it's not valid anyway, so just encode it all
                 thislink = encodeURI(thislink);
-            };
-        };
+            }
+        }
 
-        //APPEND HTTP IF NECESSARY
+        //APPEND HTTP IF NECESSARY, for security reasons, always use https (SSL)
         if (this.prefs.getBoolPref("extensions.pastehyperlink.prependhttp")) { //if the option is set to true...		
             var matchwww = /^www.*/;
             var wwwmatch = matchwww.exec(thislink);
             if (wwwmatch || !this.IsValidUrl(thislink)) {
-                thislink = "http://" + thislink;
-            };
-        };
+                thislink = "https://" + thislink;
+            }
+        }
 
         this.PasteHyperlink(thislink, whatcliptext);
         return null;
@@ -192,11 +191,8 @@ var pastehyperlink = {
     //Inserts a hyperlink element into the text and applies the proper escaping procedure
     //http://msdn.microsoft.com/en-us/library/ie/xh9be5xc(v=vs.94).aspx
     PasteHyperlink: function(whatlink, whatcliptext) {
-        console.log('Paste', thislink);
-        console.log('gMsgCompose', gMsgCompose);
         var thiseditor = gMsgCompose.editor.QueryInterface(Components.interfaces.nsIHTMLEditor);
-        console.log('thiseditor', thiseditor);
-        if (!thiseditor) { return null; };
+        if (!thiseditor) { return null; }
         let link = thiseditor.document.createElement("a");
         link.setAttribute("href", whatlink);
 
@@ -209,20 +205,20 @@ var pastehyperlink = {
             //if there is a selection, insert the hyperlink into the selection
             link.textContent = selectedtext;
             thiseditor.insertElementAtSelection(link, true);
-        };
+        }
         return null;
     },
 
 
     RemoveTheHyperlink: function(whatevent) {
         var thiseditor = gMsgCompose.editor.QueryInterface(Components.interfaces.nsIHTMLEditor);
-        if (!thiseditor) { return null; };
+        if (!thiseditor) { return null; }
 
         var selectedtext = this.IsSelection();
         if (!selectedtext) {
             let thiselement = thiseditor.getElementOrParentByTagName("href", null); //fetch the href value
             if (thiselement) {
-                thiseditor.selectElement(thiselement)
+                thiseditor.selectElement(thiselement);
                 EditorRemoveTextProperty("href", "");
             }
         } else {
@@ -233,7 +229,7 @@ var pastehyperlink = {
 
     FetchTheHyperlink: function() {
         var thiseditor = gMsgCompose.editor.QueryInterface(Components.interfaces.nsIHTMLEditor);
-        if (!thiseditor) { return null; };
+        if (!thiseditor) { return null; }
 
         let thiselement = thiseditor.getElementOrParentByTagName("href", null); //fetch the href value
         if (thiselement) {
@@ -253,9 +249,10 @@ var pastehyperlink = {
     },
 
     IsValidUrl: function(whaturl) {
-        var hval = /^(((ftp|http|https|file|www|mailto|callto|dial):(\/\/|\/\/+|(?!\/)))(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/;
-        var isvalid = hval.exec(whaturl);
-        if (isvalid) { return true; };
+        // var regex = /^(((ftp|http|https|file|www|mailto|callto|dial):(\/\/|\/\/+|(?!\/)))(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/;
+        var regex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
+        var isvalid = regex.exec(whaturl);
+        if (isvalid) { return true; }
         return false;
     },
 
@@ -265,39 +262,35 @@ var pastehyperlink = {
         if (isemail) { return true; }
         return false;
     },
-
-
-
-
-
     GetTheClipboard: function() {
         try {
             //see:  https://developer.mozilla.org/en-US/docs/Using_the_Clipboard
-            var clip = Components.classes["@mozilla.org/widget/clipboard;1"].getService(Components.interfaces.nsIClipboard);
+            var clip = Services.clipboard;
             if (!clip) return "";
-
             var trans = Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable);
             if ('init' in trans) {
                 try {
-                    trans.init(
+                    trans.init(null); //https://bugzilla.mozilla.org/show_bug.cgi?id=800495#c1 - call with 'null' because our content could come from outside the application
+                    /*trans.init(
                         (window.content || window).QueryInterface(Components.interfaces.nsIInterfaceRequestor).getInterface(Components.interfaces.nsIWebNavigation)
-                    );
+                    );*/
                 } catch (e) {}
             }
-            //if ('init' in trans){ trans.init(null);};	//https://bugzilla.mozilla.org/show_bug.cgi?id=800495#c1 - call with 'null' because our content could come from outside the application
+
             if (!trans) { return false; }
             trans.addDataFlavor("text/unicode");
+
             var gottentext = "";
             try {
                 clip.getData(trans, clip.kGlobalClipboard);
-                var str = new Object();
-                var strLength = new Object();
+                var str = {};
+                var strLength = {};
                 trans.getTransferData("text/unicode", str, strLength);
-
                 if (str) {
-                    str = str.value.QueryInterface(Components.interfaces.nsISupportsString);
+                    // str = str.value.QueryInterface(Components.interfaces.nsISupportsString);
                     //We need to convert the data back into a JavaScript string from a XPCOM objec
-                    gottentext = str.data.substring(0, strLength.value / 2);
+                    // gottentext = str.data.substring(0, strLength.value / 2);
+                    gottentext = str.value.QueryInterface(Components.interfaces.nsISupportsString).data;
                 }
             } catch (e) {} //if there isn't anything on the clipboard, don't throw any error
             return gottentext;

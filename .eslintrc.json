@@ -1,0 +1,21 @@
+{
+    "env": {
+        "browser": true,
+		"es6": true
+	},
+	"plugins": ["mozilla"],
+    "extends": "eslint:recommended",
+    "globals": {
+        "Atomics": "readonly",
+		"SharedArrayBuffer": "readonly",
+		"ChromeUtils": "readonly",
+		"Components": "readonly"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2018,
+        "sourceType": "module"
+    },
+    "rules": {
+		"mozilla/use-chromeutils-import": 2
+    }
+}
