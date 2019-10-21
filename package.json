@@ -1,15 +1,21 @@
 {
-  "name": "PasteHyperlink",
-  "version": "2.0.0",
-  "description": "Paste the clipboard contents into the selected text as a hyperlink.",
-  "main": "index.js",
-  "repository": "https://github.com/gschafra/PasteHyperlink.git",
-  "author": "Guenter Schafranek <gschafra@web.de>",
-  "license": "MIT",
-  "devDependencies": {
-    "eslint": "^6.5.1",
-    "eslint-plugin-mozilla": "^2.1.0",
-    "gulp": "^4.0.2",
-    "gulp-zip": "^5.0.1"
-  }
+    "name": "pastehyperlink",
+    "version": "2.0.0",
+    "description": "Paste the clipboard contents into the selected text as a hyperlink.",
+    "main": "index.js",
+    "repository": "https://github.com/gschafra/PasteHyperlink.git",
+    "author": "Guenter Schafranek <gschafra@web.de>",
+    "license": "MIT",
+    "scripts": {
+        "build": "gulp",
+        "lint": "./node_modules/.bin/eslint src/**/*.js"
+    },
+    "devDependencies": {
+        "eslint": "^6.5.1",
+        "eslint-plugin-mozilla": "^2.1.0",
+        "grunt2gulp": "^0.0.3",
+        "gulp": "^4.0.2",
+        "gulp-clean-dir": "^1.0.2",
+        "gulp-zip": "^5.0.1"
+    }
 }

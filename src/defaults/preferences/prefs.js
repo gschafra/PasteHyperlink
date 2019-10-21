@@ -1,3 +1,4 @@
+/*global pref*/
 pref("extensions.pastehyperlink.prependhttp", true);
 pref("extensions.pastehyperlink.confirmvalidation", false);
 pref("extensions.pastehyperlink.encodecliptext", false);

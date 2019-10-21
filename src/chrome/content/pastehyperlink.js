@@ -1,4 +1,7 @@
-var { Services } = ChromeUtils.import("resource://gre/modules/Services.jsm");
+/*global EditorRemoveTextProperty, gMsgCompose*/
+var {
+    Services
+} = ChromeUtils.import("resource://gre/modules/Services.jsm");
 
 var pastehyperlink = {
     prefs: Services.prefs,
@@ -79,10 +82,10 @@ var pastehyperlink = {
 
     AddSeaMonkeyToolbarButton: function(whatbutton) {
         var toolBar = document.getElementById('composeToolbar');
-        if (toolBar != null) {
+        if (toolBar !== null) {
             var afterId = "button-save";
             var curSet = toolBar.currentSet.split(",");
-            if (curSet.indexOf(whatbutton) == -1) {
+            if (curSet.indexOf(whatbutton) === -1) {
                 var pos = curSet.indexOf(afterId) + 1 || curSet.length;
                 var set = curSet.slice(0, pos).concat(whatbutton).concat(curSet.slice(pos));
                 toolBar.setAttribute("currentset", set.join(","));
@@ -126,11 +129,12 @@ var pastehyperlink = {
     },
 
     OpenPrefsPanel: function() {
-        var prefpanel = window.openDialog("chrome://pastehyperlink/content/options.xul", "", "centerscreen,chrome,modal");
+        window.openDialog("chrome://pastehyperlink/content/options.xul", "", "centerscreen,chrome,modal");
     },
 
 
     //Lead function used by the buttons
+    // eslint-disable-next-line
     DoTheHyperlinkThing: function(whatparam) {
         //see if there is text on the clipboard, and fetch it		
         var cliptext = this.GetTheClipboard();
@@ -158,7 +162,9 @@ var pastehyperlink = {
         if (this.prefs.getBoolPref("extensions.pastehyperlink.confirmvalidation")) { //if the option is set to true...
             if (!this.IsValidUrl(thislink)) {
                 var proceed = this.prompts.confirm(null, "PasteHyperlink", document.getElementById("pastehyperlinkStrings").getString("pastehyperlinkConfirm"));
-                if (!proceed) { return null; } //if they say no, then don't do it
+                if (!proceed) {
+                    return null;
+                } //if they say no, then don't do it
             }
         }
 
@@ -192,7 +198,9 @@ var pastehyperlink = {
     //http://msdn.microsoft.com/en-us/library/ie/xh9be5xc(v=vs.94).aspx
     PasteHyperlink: function(whatlink, whatcliptext) {
         var thiseditor = gMsgCompose.editor.QueryInterface(Components.interfaces.nsIHTMLEditor);
-        if (!thiseditor) { return null; }
+        if (!thiseditor) {
+            return null;
+        }
         let link = thiseditor.document.createElement("a");
         link.setAttribute("href", whatlink);
 
@@ -210,9 +218,12 @@ var pastehyperlink = {
     },
 
 
+    // eslint-disable-next-line
     RemoveTheHyperlink: function(whatevent) {
         var thiseditor = gMsgCompose.editor.QueryInterface(Components.interfaces.nsIHTMLEditor);
-        if (!thiseditor) { return null; }
+        if (!thiseditor) {
+            return null;
+        }
 
         var selectedtext = this.IsSelection();
         if (!selectedtext) {
@@ -229,7 +240,9 @@ var pastehyperlink = {
 
     FetchTheHyperlink: function() {
         var thiseditor = gMsgCompose.editor.QueryInterface(Components.interfaces.nsIHTMLEditor);
-        if (!thiseditor) { return null; }
+        if (!thiseditor) {
+            return null;
+        }
 
         let thiselement = thiseditor.getElementOrParentByTagName("href", null); //fetch the href value
         if (thiselement) {
@@ -244,29 +257,39 @@ var pastehyperlink = {
     IsSelection: function() {
         var thisselection = document.commandDispatcher.focusedWindow.getSelection();
         var thistext = thisselection.toString();
-        if (thistext) { return thistext; }
+        if (thistext) {
+            return thistext;
+        }
         return false;
     },
 
     IsValidUrl: function(whaturl) {
         // var regex = /^(((ftp|http|https|file|www|mailto|callto|dial):(\/\/|\/\/+|(?!\/)))(\w+:{0,1}\w*@)?(\S+)(:[0-9]+)?(\/|\/([\w#!:.?+=&%@!\-\/]))?)/;
+        // eslint-disable-next-line
         var regex = /^(?:http(s)?:\/\/)?[\w.-]+(?:\.[\w\.-]+)+[\w\-\._~:/?#[\]@!\$&'\(\)\*\+,;=.]+$/;
         var isvalid = regex.exec(whaturl);
-        if (isvalid) { return true; }
+        if (isvalid) {
+            return true;
+        }
         return false;
     },
 
     IsValidEmail: function(whaturl) {
+        // eslint-disable-next-line
         var emailregex = /^(([a-zA-Z0-9\._-]+)@([a-zA-Z0-9-]+)\.([a-zA-Z]{2,5}))$/gi;
         var isemail = emailregex.exec(whaturl);
-        if (isemail) { return true; }
+        if (isemail) {
+            return true;
+        }
         return false;
     },
     GetTheClipboard: function() {
         try {
             //see:  https://developer.mozilla.org/en-US/docs/Using_the_Clipboard
             var clip = Services.clipboard;
-            if (!clip) return "";
+            if (!clip) {
+                return "";
+            }
             var trans = Components.classes["@mozilla.org/widget/transferable;1"].createInstance(Components.interfaces.nsITransferable);
             if ('init' in trans) {
                 try {
@@ -274,10 +297,13 @@ var pastehyperlink = {
                     /*trans.init(
                         (window.content || window).QueryInterface(Components.interfaces.nsIInterfaceRequestor).getInterface(Components.interfaces.nsIWebNavigation)
                     );*/
+                    // eslint-disable-next-line
                 } catch (e) {}
             }
 
-            if (!trans) { return false; }
+            if (!trans) {
+                return false;
+            }
             trans.addDataFlavor("text/unicode");
 
             var gottentext = "";
@@ -292,6 +318,7 @@ var pastehyperlink = {
                     // gottentext = str.data.substring(0, strLength.value / 2);
                     gottentext = str.value.QueryInterface(Components.interfaces.nsISupportsString).data;
                 }
+                // eslint-disable-next-line
             } catch (e) {} //if there isn't anything on the clipboard, don't throw any error
             return gottentext;
         } catch (err) {
@@ -308,27 +335,59 @@ var pastehyperlink = {
 
     //----------------------------------------------------------------------------------------------------
 
-    onMenuItem_pastehyperlink: function(e) { this.DoTheHyperlinkThing(e); },
-    onMenuItem_removehyperlink: function(e) { this.RemoveTheHyperlink(e); },
-    onMenuItem_fetchhyperlink: function(e) { this.FetchTheHyperlink(e); },
+    onMenuItem_pastehyperlink: function(e) {
+        this.DoTheHyperlinkThing(e);
+    },
+    onMenuItem_removehyperlink: function(e) {
+        this.RemoveTheHyperlink(e);
+    },
+    onMenuItem_fetchhyperlink: function(e) {
+        this.FetchTheHyperlink(e);
+    },
 
-    onContextMenu_pastehyperlink: function(e) { this.DoTheHyperlinkThing(e); },
-    onContextMenu_removehyperlink: function(e) { this.RemoveTheHyperlink(e); },
-    onContextMenu_fetchhyperlink: function(e) { this.FetchTheHyperlink(e); },
+    onContextMenu_pastehyperlink: function(e) {
+        this.DoTheHyperlinkThing(e);
+    },
+    onContextMenu_removehyperlink: function(e) {
+        this.RemoveTheHyperlink(e);
+    },
+    onContextMenu_fetchhyperlink: function(e) {
+        this.FetchTheHyperlink(e);
+    },
 
-    onToolbarButton_pastehyperlink: function(e) { this.DoTheHyperlinkThing(e); },
-    onToolbarButton_removehyperlink: function(e) { this.RemoveTheHyperlink(e); },
-    onToolbarButton_fetchhyperlink: function(e) { this.FetchTheHyperlink(e); },
+    onToolbarButton_pastehyperlink: function(e) {
+        this.DoTheHyperlinkThing(e);
+    },
+    onToolbarButton_removehyperlink: function(e) {
+        this.RemoveTheHyperlink(e);
+    },
+    onToolbarButton_fetchhyperlink: function(e) {
+        this.FetchTheHyperlink(e);
+    },
 
-    onFormatButton_pastehyperlink: function(e) { this.DoTheHyperlinkThing(e); },
-    onFormatButton_removehyperlink: function(e) { this.RemoveTheHyperlink(e); },
-    onFormatButton_fetchhyperlink: function(e) { this.FetchTheHyperlink(e); },
+    onFormatButton_pastehyperlink: function(e) {
+        this.DoTheHyperlinkThing(e);
+    },
+    onFormatButton_removehyperlink: function(e) {
+        this.RemoveTheHyperlink(e);
+    },
+    onFormatButton_fetchhyperlink: function(e) {
+        this.FetchTheHyperlink(e);
+    },
 
-    onKeyboard_pastehyperlink: function(e) { this.DoTheHyperlinkThing(e); },
-    onKeyboard_removehyperlink: function(e) { this.RemoveTheHyperlink(e); },
-    onKeyboard_fetchhyperlink: function(e) { this.FetchTheHyperlink(e); }
+    onKeyboard_pastehyperlink: function(e) {
+        this.DoTheHyperlinkThing(e);
+    },
+    onKeyboard_removehyperlink: function(e) {
+        this.RemoveTheHyperlink(e);
+    },
+    onKeyboard_fetchhyperlink: function(e) {
+        this.FetchTheHyperlink(e);
+    }
 
 }; //end var pastehyperlink
 
 
-window.addEventListener("load", function(e) { pastehyperlink.onLoad(e); }, false);
+window.addEventListener("load", function(e) {
+    pastehyperlink.onLoad(e);
+}, false);
